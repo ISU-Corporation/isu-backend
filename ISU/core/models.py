@@ -4,22 +4,19 @@ from django.db import models
 
 class User(AbstractUser):
     pass
-    # Можно ли реализовать два отдельных, но похожих юзера?
-    # Или в этом нет смысла?
 
 
 class UserProfile(models.Model):
     class Status:
         pass
-    # Хз, муть какая-то.
 
 
 class Schedule(models.Model):
     data = models.DateField("день", null=True)
-    # Создать список или несколько чарфилдов?
 
 
 class PassCard(models.Model):
+    mark = models.IntegerField('оценка', null=False)
     student = models.OneToOneField(User, verbose_name='ученик', related_name='passcard', on_delete=models.CASCADE,
                                    primary_key=True)
 
