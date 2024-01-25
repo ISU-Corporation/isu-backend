@@ -17,7 +17,12 @@ class UserProfile(models.Model):
         on_delete=models.CASCADE,
         verbose_name='пользователь',
     )
-    role = models.CharField('роль', max_length=2, choices=consts.AUTH_STATUS_CHOICES)
+    role = models.CharField(
+        'роль',
+        max_length=2,
+        choices=consts.AUTH_STATUS_CHOICES,
+        default=consts.AUTH_STATUS_STUDENT
+    )
     first_name = models.CharField('имя', max_length=255)
     last_name = models.CharField('фамилия', max_length=255)
     patronymic = models.CharField('отчество', max_length=255)
