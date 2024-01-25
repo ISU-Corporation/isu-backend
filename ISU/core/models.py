@@ -50,7 +50,10 @@ class Schedule(models.Model):
         verbose_name='предметы',
         related_name='schedule',
     )
-    date = models.DateField("дата", auto_now=True)
+    date = models.DateField(
+        "дата",
+        auto_now=True
+    )
 
     class Meta:
         verbose_name = 'расписание'
@@ -61,7 +64,11 @@ class Schedule(models.Model):
 
 
 class PassCard(models.Model):
-    mark = models.IntegerField('оценка', null=False, blank=True)
+    mark = models.IntegerField(
+        'оценка',
+        null=False,
+        blank=True
+    )
     student = models.ForeignKey(
         User,
         related_name='student',
