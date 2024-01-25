@@ -7,6 +7,8 @@ router = DefaultRouter()
 
 
 router.register('schedules', views.Schedule, basename='schedules')
+router.register('passcard', views.PassCard, basename='passcard')
+router.register('subject', views.Subject, basename='subject')
 
 urlpatterns = [
     path('user_profile/<int:pk>/', views.UserProfile.as_view(), name='user_profile'),
