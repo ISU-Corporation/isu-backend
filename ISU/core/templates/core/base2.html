@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>{{  title  }}</title>
+  <link type="text/css" href="{% static 'core/css/styles.css' %}" rel="stylesheet" />
+</head>
+<body link="#000000" vlink="#000000" alink="#000000">
+<html>
+  <body>
+    <section class="menu">
+      <a href="#" class="menu__logo logo">Меню</a>
+      <ul class="menu__list list">
+        <li class="menu__item item">
+          <a href="" class="menu__link link">
+            <span>Главная</span>
+          </a>
+        </li>
+        <li class="menu__item item">
+          <a href="" class="menu__link link">
+            <span>Информация</span>
+          </a>
+        </li>
+        <li class="menu__item item">
+          <a href="" class="menu__link link">
+            <span>Поддержка</span>
+          </a>
+        </li>
+     </section>
+    <section class="content">
+      {% block content %}{% endblock %}
+    </section>
+  </body>
+</html>
+</body>
+</html>
