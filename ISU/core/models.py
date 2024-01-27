@@ -17,7 +17,12 @@ class UserProfile(models.Model):
         on_delete=models.CASCADE,
         verbose_name='пользователь',
     )
-    role = models.CharField('роль', max_length=2, choices=consts.AUTH_STATUS_CHOICES)
+    role = models.CharField(
+        'роль',
+        max_length=2,
+        choices=consts.AUTH_STATUS_CHOICES,
+        default=consts.AUTH_STATUS_STUDENT
+    )
     first_name = models.CharField('имя', max_length=255)
     last_name = models.CharField('фамилия', max_length=255)
     patronymic = models.CharField('отчество', max_length=255)
@@ -45,7 +50,10 @@ class Schedule(models.Model):
         verbose_name='предметы',
         related_name='schedule',
     )
-    date = models.DateField("дата", auto_now=True)
+    date = models.DateField(
+        "дата",
+        auto_now=True
+    )
 
     class Meta:
         verbose_name = 'расписание'
@@ -56,7 +64,11 @@ class Schedule(models.Model):
 
 
 class PassCard(models.Model):
-    mark = models.IntegerField('оценка', null=False, blank=True)
+    mark = models.IntegerField(
+        'оценка',
+        null=False,
+        blank=True
+    )
     student = models.ForeignKey(
         User,
         related_name='student',
