@@ -25,3 +25,9 @@ class Subject(serializers.ModelSerializer):
     class Meta:
         model = models.Subject
         fields = '__all__'
+
+
+class Homework(serializers.ModelSerializer):
+    class Meta:
+        model = models.Homework
+        fields = '__all__'
