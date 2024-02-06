@@ -34,8 +34,8 @@ INSTALLED_APPS = [
     'djoser',
 
     'core.apps.CoreConfig',
-    'education',
-    'chat',
+    'education.apps.EducationConfig',
+    'chat.apps.ChatConfig',
 ]
 
 MIDDLEWARE = [

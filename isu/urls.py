@@ -18,6 +18,7 @@ urlpatterns = [
     path('backend/swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
     path('backend/admin/', admin.site.urls),
     path('backend/', include('core.urls')),
+    path('backend/', include('education.urls')),
     path('backend/auth/', include('djoser.urls')),
     re_path(r'backend/auth/', include('djoser.urls.authtoken')),
 ]
