@@ -9,25 +9,7 @@ class UserProfile(serializers.ModelSerializer):
         fields = '__all__'
 
 
-class Schedule(serializers.ModelSerializer):
-    class Meta:
-        model = models.Schedule
-        fields = '__all__'
-
-
 class PassCard(serializers.ModelSerializer):
     class Meta:
         model = models.PassCard
-        fields = '__all__'
-
-
-class Subject(serializers.ModelSerializer):
-    class Meta:
-        model = models.Subject
-        fields = '__all__'
-
-
-class Homework(serializers.ModelSerializer):
-    class Meta:
-        model = models.Homework
         fields = '__all__'

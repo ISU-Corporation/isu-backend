@@ -1,11 +1,9 @@
 from django.db import models
 
-from core.models import User
-
 
 class Subject(models.Model):
     teacher = models.OneToOneField(
-        User,
+        'core.User',
         related_name='subject',
         on_delete=models.DO_NOTHING,
         verbose_name='преподаватель',
@@ -46,7 +44,7 @@ class Homework(models.Model):
 
 class Schedule(models.Model):
     subjects = models.ManyToManyField(
-        'Subject',
+        Subject,
         verbose_name='предметы',
         related_name='schedule',
     )

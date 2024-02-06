@@ -57,7 +57,7 @@ class PassCard(models.Model):
         verbose_name='ученик',
     )
     subject = models.ForeignKey(
-        'Subject',
+        'education.Subject',
         related_name='pass_card',
         on_delete=models.DO_NOTHING,
         verbose_name="предмет",
