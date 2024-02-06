@@ -48,7 +48,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'ISU.urls'
+ROOT_URLCONF = 'isu.urls'
 
 TEMPLATES = [
     {
@@ -66,7 +66,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'ISU.wsgi.application'
+WSGI_APPLICATION = 'isu.wsgi.application'
 
 
 # Database
