@@ -6,12 +6,12 @@ stages:
 
 before_script:
   - pip install -r requirements.txt
+  - apk add --no-cache py-pip
 
 job_build:
   stage: build
   script:
     - echo "Building the project"
-    - python manage.py collectstatic --noinput
 
 job_test:
   stage: test
