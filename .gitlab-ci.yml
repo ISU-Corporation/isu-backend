@@ -1,0 +1,15 @@
+stages:
+  - build
+  - test
+
+job_build:
+  stage: build
+  image: ubuntu:20.04
+  script:
+    - echo "Building the project"
+
+job_test:
+  stage: test
+  image: ubuntu:20.04
+  script:
+    - echo "Running tests"
