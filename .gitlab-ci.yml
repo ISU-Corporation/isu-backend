@@ -1,15 +1,20 @@
+image: ubuntu:20.04
+
 stages:
   - build
   - test
 
+before_script:
+  - pip install -r requirements.txt
+
 job_build:
   stage: build
-  image: ubuntu:20.04
   script:
     - echo "Building the project"
+    - python manage.py collectstatic --noinput
 
 job_test:
   stage: test
-  image: ubuntu:20.04
   script:
     - echo "Running tests"
+    - python manage.py test
