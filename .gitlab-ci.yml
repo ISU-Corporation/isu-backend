@@ -4,10 +4,6 @@ stages:
   - build
   - test
 
-before_script:
-  - pip install -r requirements.txt
-  - apk add --no-cache py-pip
-
 job_build:
   stage: build
   script:
