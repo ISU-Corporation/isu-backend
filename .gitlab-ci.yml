@@ -13,4 +13,4 @@ job_test:
   stage: test
   script:
     - echo "Running tests"
-    - python manage.py test
+    - ./manage.py test
