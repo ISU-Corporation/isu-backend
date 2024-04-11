@@ -1,12 +1,17 @@
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from django.views.generic import RedirectView
-
-from src.config.yasg import urlpatterns as swagger_urls
+from drf_spectacular.views import SpectacularSwaggerView, SpectacularAPIView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', RedirectView.as_view(url='swagger/')),
-]
 
-urlpatterns += swagger_urls
+    # Swagger
+    path('', RedirectView.as_view(url='api/schema/swagger-ui/')),
+    path('api/schema/', SpectacularAPIView.as_view(), name='schema'),
+    path('api/schema/swagger-ui/', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),
+
+    # Djoser + SimpleJWT
+    path('api/', include('djoser.urls')),
+    path('api/', include('djoser.urls.jwt')),
+]
