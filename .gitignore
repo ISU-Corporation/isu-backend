@@ -4,4 +4,4 @@ __pycache__
 venv/
 
 # файлы Django
-src/db.sqlite3
+db.sqlite3
