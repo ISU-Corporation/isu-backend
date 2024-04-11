@@ -1,6 +1,7 @@
-.idea
-.venv
-/venv
-db.sqlite3
+# файлы python
 __pycache__
-/media
+.idea/
+venv/
+
+# файлы Django
+src/db.sqlite3
