@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # библиотеки
+    'corsheaders',  # noqa (для кросс-платформенных запросов)
     'django_extensions',
     'rest_framework',
     'drf_spectacular',
@@ -46,6 +47,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',  # noqa
 ]
 
 ROOT_URLCONF = 'config.urls'
@@ -107,6 +109,14 @@ REST_FRAMEWORK = {
     ),
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
 }
+
+
+# CorsHeaders
+
+CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOWED_ORIGINS = ["http://localhost:8080"]
+CORS_ALLOWED_METHODS = ['GET', 'POST', 'PUT', 'DELETE']
+CORS_ALLOWED_HEADERS = ['Content-Type', 'Authorization']
 
 
 # SimpleJWT
