@@ -1,3 +1,7 @@
+stages:
+  - build
+  - test
+
 build:
   stage: build
   script:
@@ -6,7 +10,9 @@ build:
 flake8:
   stage: test
   script:
-    echo "flake8!"
+    - docker run --rm -i $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_NAME bash -c "
+      flake8 users"
+  retry: 2
 
 test:
   stage: test
