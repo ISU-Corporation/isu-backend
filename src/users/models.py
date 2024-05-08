@@ -12,7 +12,7 @@ class User(AbstractUser):
             Value(' '),
             models.F('first_name'),
             Value(' '),
-            models.F('patronymic')
+            models.F('patronymic'),
         ),
         output_field=models.CharField('ФИО', max_length=255),
         db_persist=True,
