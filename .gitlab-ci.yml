@@ -1,14 +1,14 @@
 build:
   stage: build
   script:
-    -echo "build!"
+    echo "build!"
 
 flake8:
   stage: test
   script:
-    -echo "flake8!"
+    echo "flake8!"
 
 test:
   stage: test
   script:
-    -echo "test!"
+    echo "test!"
