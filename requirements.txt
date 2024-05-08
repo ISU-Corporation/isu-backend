@@ -1,3 +1,4 @@
+# Django, DRF и дополения для них
 asgiref==3.8.1
 asttokens==2.4.1
 attrs==23.2.0
@@ -16,11 +17,8 @@ djoser==2.2.2
 drf-spectacular==0.27.2
 exceptiongroup==1.2.0
 executing==2.0.1
-flake8==7.0.0
 idna==3.7
 inflection==0.5.1
-ipython==8.23.0
-isort==5.13.2
 jedi==0.19.1
 jsonschema==4.21.1
 jsonschema-specifications==2023.12.1
@@ -53,3 +51,14 @@ typing_extensions==4.11.0
 uritemplate==4.1.1
 urllib3==2.2.1
 wcwidth==0.2.13
+
+# линтеры
+flake8==7.0.0
+flake8-commas==2.1.0
+flake8-quotes==3.4.0
+flake8-string-format==0.3.0
+flake8-isort==6.1.1
+isort==5.13.2
+
+# удобный терминал
+ipython==8.23.0
