@@ -1,3 +1,5 @@
+image: python:3.10
+
 stages:
   - build
   - test
@@ -5,14 +7,18 @@ stages:
 build:
   stage: build
   script:
-    echo "build!"
+    - pip install -r requirements.txt
+    - python manage.py migrate
   retry: 2
 
 flake8:
   stage: test
-  image: python:3.8
   script:
     - pip install flake8
+    - pip install flake8-commas
+    - pip install flake8-quotes
+    - pip install flake8-string-format
+    - pip install flake8-isort
     - flake8
   retry: 2
 
