@@ -26,5 +26,7 @@ flake8:
 test:
   stage: test
   script:
-    echo "test!"
+    - cd src
+    - python manage.py test
+  coverage: '/(?i)total.*? (100(?:\.0+)?\%|[1-9]?\d(?:\.\d+)?\%)$/'
   retry: 2
