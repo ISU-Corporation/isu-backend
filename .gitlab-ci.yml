@@ -1,5 +1,8 @@
 image: python:3.10
 
+before_script:
+  - pip install -r requirements.txt
+
 stages:
   - build
   - test
@@ -7,7 +10,6 @@ stages:
 build:
   stage: build
   script:
-    - pip install -r requirements.txt
     - cd src
     - python manage.py migrate
   retry: 2
