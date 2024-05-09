@@ -7,6 +7,7 @@ stages:
 build:
   stage: build
   script:
+    - cd src
     - pip install -r requirements.txt
     - python manage.py migrate
   retry: 2
