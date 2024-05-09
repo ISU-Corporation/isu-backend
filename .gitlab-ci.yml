@@ -24,6 +24,5 @@ test:
   stage: test
   script:
     - coverage run src/manage.py test
-    - coverage report
   coverage: '/(?i)total.*? (100(?:\.0+)?\%|[1-9]?\d(?:\.\d+)?\%)$/'
   retry: 2
