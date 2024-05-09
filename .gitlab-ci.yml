@@ -6,14 +6,16 @@ build:
   stage: build
   script:
     echo "build!"
+  retry: 2
 
 flake8:
   stage: test
   script:
-    echo "build!"
+    echo "flake8!"
   retry: 2
 
 test:
   stage: test
   script:
     echo "test!"
+  retry: 2
