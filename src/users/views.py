@@ -1,6 +1,6 @@
 from djoser.views import UserViewSet
 
-from src.users import serializers
+from users import serializers
 
 
 class User(UserViewSet):
