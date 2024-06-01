@@ -1,7 +1,7 @@
 from django.urls import include, path
 from rest_framework.routers import SimpleRouter
 
-from users import views
+from src.users import views
 
 router = SimpleRouter()
 router.register('users', views.User, 'users')
