@@ -7,5 +7,5 @@ jobs:
     steps:
       - name: build
         run: |
-          cd src
+          cd src/
           python manage.py migrate
