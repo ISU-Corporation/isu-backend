@@ -3,5 +3,5 @@ __pycache__
 .idea/
 venv/
 
-# файлы Django
-db.sqlite3
+# безопасность
+.env
